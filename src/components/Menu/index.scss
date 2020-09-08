@@ -1,0 +1,12 @@
+.floating-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    opacity: 0.1;
+    transition: opacity 0.5s;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
+}

@@ -14,9 +14,11 @@
     "@types/react-dom": "^16.9.0",
     "antd": "^4.4.3",
     "axios": "^0.19.2",
-    "mobx": "^5.15.6",
-    "mobx-react": "^6.2.5",
+    "mobx": "^5.15.7",
+    "mobx-react": "^6.3.0",
+    "mobx-state-tree": "^3.17.2",
     "node-sass": "^4.14.1",
+    "protobufjs": "~6.10.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -26,7 +28,8 @@
     "start": "set HTTPS=true&&set SSL_CRT_FILE=./.cert/server.local.crt&&set SSL_KEY_FILE=./.cert/server.local.key&&set WDS_SOCKET_PORT=3000&&react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate:proto": "pbjs -t json-module -w es6 ./src/proto/*.proto > ./src/proto/index.js && pbjs -t static-module ./src/proto/*.proto | pbts -o ./src/proto/index.d.ts -"
   },
   "eslintConfig": {
     "extends": "react-app"

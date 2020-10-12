@@ -77,7 +77,8 @@ class Fetch {
     post<T>(path: string = "/", payload: object = {}) {
         return this.request<T>("POST", path, payload);
     }
-    parseError(e: AxiosError | AxiosResponse): RequestError {
+    
+    private parseError(e: AxiosError | AxiosResponse): RequestError {
         if (isAxiosResponse(e)) {
             return new RequestError(e.data.name, e.data.message);
         } else {

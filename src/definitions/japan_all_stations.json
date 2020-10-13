@@ -1,0 +1,962 @@
+[
+  {
+    "type": "station",
+    "name": "稚内",
+    "blockId": 47401,
+    "prefectureId": 11
+  },
+  {
+    "type": "station",
+    "name": "北見枝幸",
+    "blockId": 47402,
+    "prefectureId": 11
+  },
+  {
+    "type": "station",
+    "name": "旭川",
+    "blockId": 47407,
+    "prefectureId": 12
+  },
+  {
+    "type": "station",
+    "name": "羽幌",
+    "blockId": 47404,
+    "prefectureId": 13
+  },
+  {
+    "type": "station",
+    "name": "留萌",
+    "blockId": 47406,
+    "prefectureId": 13
+  },
+  {
+    "type": "station",
+    "name": "札幌",
+    "blockId": 47412,
+    "prefectureId": 14
+  },
+  {
+    "type": "station",
+    "name": "岩見沢",
+    "blockId": 47413,
+    "prefectureId": 15
+  },
+  {
+    "type": "station",
+    "name": "小樽",
+    "blockId": 47411,
+    "prefectureId": 16
+  },
+  {
+    "type": "station",
+    "name": "倶知安",
+    "blockId": 47433,
+    "prefectureId": 16
+  },
+  {
+    "type": "station",
+    "name": "寿都",
+    "blockId": 47421,
+    "prefectureId": 16
+  },
+  {
+    "type": "station",
+    "name": "雄武",
+    "blockId": 47405,
+    "prefectureId": 17
+  },
+  {
+    "type": "station",
+    "name": "紋別",
+    "blockId": 47435,
+    "prefectureId": 17
+  },
+  {
+    "type": "station",
+    "name": "網走",
+    "blockId": 47409,
+    "prefectureId": 17
+  },
+  {
+    "type": "station",
+    "name": "根室",
+    "blockId": 47420,
+    "prefectureId": 18
+  },
+  {
+    "type": "station",
+    "name": "釧路",
+    "blockId": 47418,
+    "prefectureId": 19
+  },
+  {
+    "type": "station",
+    "name": "帯広",
+    "blockId": 47417,
+    "prefectureId": 20
+  },
+  {
+    "type": "station",
+    "name": "広尾",
+    "blockId": 47440,
+    "prefectureId": 20
+  },
+  {
+    "type": "station",
+    "name": "苫小牧",
+    "blockId": 47424,
+    "prefectureId": 21
+  },
+  {
+    "type": "station",
+    "name": "室蘭",
+    "blockId": 47423,
+    "prefectureId": 21
+  },
+  {
+    "type": "station",
+    "name": "浦河",
+    "blockId": 47426,
+    "prefectureId": 22
+  },
+  {
+    "type": "station",
+    "name": "函館",
+    "blockId": 47430,
+    "prefectureId": 23
+  },
+  {
+    "type": "station",
+    "name": "江差",
+    "blockId": 47428,
+    "prefectureId": 24
+  },
+  {
+    "type": "station",
+    "name": "むつ",
+    "blockId": 47576,
+    "prefectureId": 31
+  },
+  {
+    "type": "station",
+    "name": "青森",
+    "blockId": 47575,
+    "prefectureId": 31
+  },
+  {
+    "type": "station",
+    "name": "深浦",
+    "blockId": 47574,
+    "prefectureId": 31
+  },
+  {
+    "type": "station",
+    "name": "八戸",
+    "blockId": 47581,
+    "prefectureId": 31
+  },
+  {
+    "type": "station",
+    "name": "秋田",
+    "blockId": 47582,
+    "prefectureId": 32
+  },
+  {
+    "type": "station",
+    "name": "盛岡",
+    "blockId": 47584,
+    "prefectureId": 33
+  },
+  {
+    "type": "station",
+    "name": "宮古",
+    "blockId": 47585,
+    "prefectureId": 33
+  },
+  {
+    "type": "station",
+    "name": "大船渡",
+    "blockId": 47512,
+    "prefectureId": 33
+  },
+  {
+    "type": "station",
+    "name": "石巻",
+    "blockId": 47592,
+    "prefectureId": 34
+  },
+  {
+    "type": "station",
+    "name": "仙台",
+    "blockId": 47590,
+    "prefectureId": 34
+  },
+  {
+    "type": "station",
+    "name": "酒田",
+    "blockId": 47587,
+    "prefectureId": 35
+  },
+  {
+    "type": "station",
+    "name": "新庄",
+    "blockId": 47520,
+    "prefectureId": 35
+  },
+  {
+    "type": "station",
+    "name": "山形",
+    "blockId": 47588,
+    "prefectureId": 35
+  },
+  {
+    "type": "station",
+    "name": "福島",
+    "blockId": 47595,
+    "prefectureId": 36
+  },
+  {
+    "type": "station",
+    "name": "若松",
+    "blockId": 47570,
+    "prefectureId": 36
+  },
+  {
+    "type": "station",
+    "name": "白河",
+    "blockId": 47597,
+    "prefectureId": 36
+  },
+  {
+    "type": "station",
+    "name": "小名浜",
+    "blockId": 47598,
+    "prefectureId": 36
+  },
+  {
+    "type": "station",
+    "name": "水戸",
+    "blockId": 47629,
+    "prefectureId": 40
+  },
+  {
+    "type": "station",
+    "name": "つくば（館野）",
+    "blockId": 47646,
+    "prefectureId": 40
+  },
+  {
+    "type": "station",
+    "name": "奥日光（日光）",
+    "blockId": 47690,
+    "prefectureId": 41
+  },
+  {
+    "type": "station",
+    "name": "宇都宮",
+    "blockId": 47615,
+    "prefectureId": 41
+  },
+  {
+    "type": "station",
+    "name": "前橋",
+    "blockId": 47624,
+    "prefectureId": 42
+  },
+  {
+    "type": "station",
+    "name": "熊谷",
+    "blockId": 47626,
+    "prefectureId": 43
+  },
+  {
+    "type": "station",
+    "name": "秩父",
+    "blockId": 47641,
+    "prefectureId": 43
+  },
+  {
+    "type": "station",
+    "name": "東京",
+    "blockId": 47662,
+    "prefectureId": 44
+  },
+  {
+    "type": "station",
+    "name": "大島",
+    "blockId": 47675,
+    "prefectureId": 44
+  },
+  {
+    "type": "station",
+    "name": "三宅島",
+    "blockId": 47677,
+    "prefectureId": 44
+  },
+  {
+    "type": "station",
+    "name": "八丈島",
+    "blockId": 47678,
+    "prefectureId": 44
+  },
+  {
+    "type": "station",
+    "name": "父島",
+    "blockId": 47971,
+    "prefectureId": 44
+  },
+  {
+    "type": "station",
+    "name": "南鳥島",
+    "blockId": 47991,
+    "prefectureId": 44
+  },
+  {
+    "type": "station",
+    "name": "銚子",
+    "blockId": 47648,
+    "prefectureId": 45
+  },
+  {
+    "type": "station",
+    "name": "千葉",
+    "blockId": 47682,
+    "prefectureId": 45
+  },
+  {
+    "type": "station",
+    "name": "勝浦",
+    "blockId": 47674,
+    "prefectureId": 45
+  },
+  {
+    "type": "station",
+    "name": "館山",
+    "blockId": 47672,
+    "prefectureId": 45
+  },
+  {
+    "type": "station",
+    "name": "横浜",
+    "blockId": 47670,
+    "prefectureId": 46
+  },
+  {
+    "type": "station",
+    "name": "長野",
+    "blockId": 47610,
+    "prefectureId": 48
+  },
+  {
+    "type": "station",
+    "name": "軽井沢",
+    "blockId": 47622,
+    "prefectureId": 48
+  },
+  {
+    "type": "station",
+    "name": "松本",
+    "blockId": 47618,
+    "prefectureId": 48
+  },
+  {
+    "type": "station",
+    "name": "諏訪",
+    "blockId": 47620,
+    "prefectureId": 48
+  },
+  {
+    "type": "station",
+    "name": "飯田",
+    "blockId": 47637,
+    "prefectureId": 48
+  },
+  {
+    "type": "station",
+    "name": "甲府",
+    "blockId": 47638,
+    "prefectureId": 49
+  },
+  {
+    "type": "station",
+    "name": "河口湖",
+    "blockId": 47640,
+    "prefectureId": 49
+  },
+  {
+    "type": "station",
+    "name": "富士山",
+    "blockId": 47639,
+    "prefectureId": 49
+  },
+  {
+    "type": "station",
+    "name": "三島",
+    "blockId": 47657,
+    "prefectureId": 50
+  },
+  {
+    "type": "station",
+    "name": "網代",
+    "blockId": 47668,
+    "prefectureId": 50
+  },
+  {
+    "type": "station",
+    "name": "静岡",
+    "blockId": 47656,
+    "prefectureId": 50
+  },
+  {
+    "type": "station",
+    "name": "浜松",
+    "blockId": 47654,
+    "prefectureId": 50
+  },
+  {
+    "type": "station",
+    "name": "御前崎",
+    "blockId": 47655,
+    "prefectureId": 50
+  },
+  {
+    "type": "station",
+    "name": "石廊崎",
+    "blockId": 47666,
+    "prefectureId": 50
+  },
+  {
+    "type": "station",
+    "name": "富士山",
+    "blockId": 47639,
+    "prefectureId": 50
+  },
+  {
+    "type": "station",
+    "name": "名古屋",
+    "blockId": 47636,
+    "prefectureId": 51
+  },
+  {
+    "type": "station",
+    "name": "伊良湖",
+    "blockId": 47653,
+    "prefectureId": 51
+  },
+  {
+    "type": "station",
+    "name": "高山",
+    "blockId": 47617,
+    "prefectureId": 52
+  },
+  {
+    "type": "station",
+    "name": "岐阜",
+    "blockId": 47632,
+    "prefectureId": 52
+  },
+  {
+    "type": "station",
+    "name": "四日市",
+    "blockId": 47684,
+    "prefectureId": 53
+  },
+  {
+    "type": "station",
+    "name": "上野",
+    "blockId": 47649,
+    "prefectureId": 53
+  },
+  {
+    "type": "station",
+    "name": "津",
+    "blockId": 47651,
+    "prefectureId": 53
+  },
+  {
+    "type": "station",
+    "name": "尾鷲",
+    "blockId": 47663,
+    "prefectureId": 53
+  },
+  {
+    "type": "station",
+    "name": "相川",
+    "blockId": 47602,
+    "prefectureId": 54
+  },
+  {
+    "type": "station",
+    "name": "新潟",
+    "blockId": 47604,
+    "prefectureId": 54
+  },
+  {
+    "type": "station",
+    "name": "高田",
+    "blockId": 47612,
+    "prefectureId": 54
+  },
+  {
+    "type": "station",
+    "name": "伏木",
+    "blockId": 47606,
+    "prefectureId": 55
+  },
+  {
+    "type": "station",
+    "name": "富山",
+    "blockId": 47607,
+    "prefectureId": 55
+  },
+  {
+    "type": "station",
+    "name": "輪島",
+    "blockId": 47600,
+    "prefectureId": 56
+  },
+  {
+    "type": "station",
+    "name": "金沢",
+    "blockId": 47605,
+    "prefectureId": 56
+  },
+  {
+    "type": "station",
+    "name": "福井",
+    "blockId": 47616,
+    "prefectureId": 57
+  },
+  {
+    "type": "station",
+    "name": "敦賀",
+    "blockId": 47631,
+    "prefectureId": 57
+  },
+  {
+    "type": "station",
+    "name": "彦根",
+    "blockId": 47761,
+    "prefectureId": 60
+  },
+  {
+    "type": "station",
+    "name": "伊吹山",
+    "blockId": 47751,
+    "prefectureId": 60
+  },
+  {
+    "type": "station",
+    "name": "舞鶴",
+    "blockId": 47750,
+    "prefectureId": 61
+  },
+  {
+    "type": "station",
+    "name": "京都",
+    "blockId": 47759,
+    "prefectureId": 61
+  },
+  {
+    "type": "station",
+    "name": "大阪",
+    "blockId": 47772,
+    "prefectureId": 62
+  },
+  {
+    "type": "station",
+    "name": "豊岡",
+    "blockId": 47747,
+    "prefectureId": 63
+  },
+  {
+    "type": "station",
+    "name": "姫路",
+    "blockId": 47769,
+    "prefectureId": 63
+  },
+  {
+    "type": "station",
+    "name": "神戸",
+    "blockId": 47770,
+    "prefectureId": 63
+  },
+  {
+    "type": "station",
+    "name": "洲本",
+    "blockId": 47776,
+    "prefectureId": 63
+  },
+  {
+    "type": "station",
+    "name": "奈良",
+    "blockId": 47780,
+    "prefectureId": 64
+  },
+  {
+    "type": "station",
+    "name": "和歌山",
+    "blockId": 47777,
+    "prefectureId": 65
+  },
+  {
+    "type": "station",
+    "name": "潮岬",
+    "blockId": 47778,
+    "prefectureId": 65
+  },
+  {
+    "type": "station",
+    "name": "津山",
+    "blockId": 47756,
+    "prefectureId": 66
+  },
+  {
+    "type": "station",
+    "name": "岡山",
+    "blockId": 47768,
+    "prefectureId": 66
+  },
+  {
+    "type": "station",
+    "name": "福山",
+    "blockId": 47767,
+    "prefectureId": 67
+  },
+  {
+    "type": "station",
+    "name": "広島",
+    "blockId": 47765,
+    "prefectureId": 67
+  },
+  {
+    "type": "station",
+    "name": "呉",
+    "blockId": 47766,
+    "prefectureId": 67
+  },
+  {
+    "type": "station",
+    "name": "西郷",
+    "blockId": 47740,
+    "prefectureId": 68
+  },
+  {
+    "type": "station",
+    "name": "松江",
+    "blockId": 47741,
+    "prefectureId": 68
+  },
+  {
+    "type": "station",
+    "name": "浜田",
+    "blockId": 47755,
+    "prefectureId": 68
+  },
+  {
+    "type": "station",
+    "name": "境",
+    "blockId": 47742,
+    "prefectureId": 69
+  },
+  {
+    "type": "station",
+    "name": "鳥取",
+    "blockId": 47746,
+    "prefectureId": 69
+  },
+  {
+    "type": "station",
+    "name": "米子",
+    "blockId": 47744,
+    "prefectureId": 69
+  },
+  {
+    "type": "station",
+    "name": "徳島",
+    "blockId": 47895,
+    "prefectureId": 71
+  },
+  {
+    "type": "station",
+    "name": "剣山",
+    "blockId": 47894,
+    "prefectureId": 71
+  },
+  {
+    "type": "station",
+    "name": "高松",
+    "blockId": 47891,
+    "prefectureId": 72
+  },
+  {
+    "type": "station",
+    "name": "多度津",
+    "blockId": 47890,
+    "prefectureId": 72
+  },
+  {
+    "type": "station",
+    "name": "松山",
+    "blockId": 47887,
+    "prefectureId": 73
+  },
+  {
+    "type": "station",
+    "name": "宇和島",
+    "blockId": 47892,
+    "prefectureId": 73
+  },
+  {
+    "type": "station",
+    "name": "高知",
+    "blockId": 47893,
+    "prefectureId": 74
+  },
+  {
+    "type": "station",
+    "name": "室戸岬",
+    "blockId": 47899,
+    "prefectureId": 74
+  },
+  {
+    "type": "station",
+    "name": "宿毛",
+    "blockId": 47897,
+    "prefectureId": 74
+  },
+  {
+    "type": "station",
+    "name": "清水",
+    "blockId": 47898,
+    "prefectureId": 74
+  },
+  {
+    "type": "station",
+    "name": "萩",
+    "blockId": 47754,
+    "prefectureId": 81
+  },
+  {
+    "type": "station",
+    "name": "山口",
+    "blockId": 47784,
+    "prefectureId": 81
+  },
+  {
+    "type": "station",
+    "name": "下関",
+    "blockId": 47762,
+    "prefectureId": 81
+  },
+  {
+    "type": "station",
+    "name": "飯塚",
+    "blockId": 47809,
+    "prefectureId": 82
+  },
+  {
+    "type": "station",
+    "name": "福岡",
+    "blockId": 47807,
+    "prefectureId": 82
+  },
+  {
+    "type": "station",
+    "name": "日田",
+    "blockId": 47814,
+    "prefectureId": 83
+  },
+  {
+    "type": "station",
+    "name": "大分",
+    "blockId": 47815,
+    "prefectureId": 83
+  },
+  {
+    "type": "station",
+    "name": "厳原",
+    "blockId": 47800,
+    "prefectureId": 84
+  },
+  {
+    "type": "station",
+    "name": "平戸",
+    "blockId": 47805,
+    "prefectureId": 84
+  },
+  {
+    "type": "station",
+    "name": "佐世保",
+    "blockId": 47812,
+    "prefectureId": 84
+  },
+  {
+    "type": "station",
+    "name": "長崎",
+    "blockId": 47817,
+    "prefectureId": 84
+  },
+  {
+    "type": "station",
+    "name": "雲仙岳",
+    "blockId": 47818,
+    "prefectureId": 84
+  },
+  {
+    "type": "station",
+    "name": "福江",
+    "blockId": 47843,
+    "prefectureId": 84
+  },
+  {
+    "type": "station",
+    "name": "佐賀",
+    "blockId": 47813,
+    "prefectureId": 85
+  },
+  {
+    "type": "station",
+    "name": "熊本",
+    "blockId": 47819,
+    "prefectureId": 86
+  },
+  {
+    "type": "station",
+    "name": "阿蘇山",
+    "blockId": 47821,
+    "prefectureId": 86
+  },
+  {
+    "type": "station",
+    "name": "人吉",
+    "blockId": 47824,
+    "prefectureId": 86
+  },
+  {
+    "type": "station",
+    "name": "牛深",
+    "blockId": 47838,
+    "prefectureId": 86
+  },
+  {
+    "type": "station",
+    "name": "延岡",
+    "blockId": 47822,
+    "prefectureId": 87
+  },
+  {
+    "type": "station",
+    "name": "宮崎",
+    "blockId": 47830,
+    "prefectureId": 87
+  },
+  {
+    "type": "station",
+    "name": "都城",
+    "blockId": 47829,
+    "prefectureId": 87
+  },
+  {
+    "type": "station",
+    "name": "油津",
+    "blockId": 47835,
+    "prefectureId": 87
+  },
+  {
+    "type": "station",
+    "name": "阿久根",
+    "blockId": 47823,
+    "prefectureId": 88
+  },
+  {
+    "type": "station",
+    "name": "鹿児島",
+    "blockId": 47827,
+    "prefectureId": 88
+  },
+  {
+    "type": "station",
+    "name": "枕崎",
+    "blockId": 47831,
+    "prefectureId": 88
+  },
+  {
+    "type": "station",
+    "name": "種子島",
+    "blockId": 47837,
+    "prefectureId": 88
+  },
+  {
+    "type": "station",
+    "name": "名瀬",
+    "blockId": 47909,
+    "prefectureId": 88
+  },
+  {
+    "type": "station",
+    "name": "屋久島",
+    "blockId": 47836,
+    "prefectureId": 88
+  },
+  {
+    "type": "station",
+    "name": "沖永良部",
+    "blockId": 47942,
+    "prefectureId": 88
+  },
+  {
+    "type": "station",
+    "name": "名護",
+    "blockId": 47940,
+    "prefectureId": 91
+  },
+  {
+    "type": "station",
+    "name": "那覇",
+    "blockId": 47936,
+    "prefectureId": 91
+  },
+  {
+    "type": "station",
+    "name": "石垣島",
+    "blockId": 47918,
+    "prefectureId": 91
+  },
+  {
+    "type": "station",
+    "name": "宮古島",
+    "blockId": 47927,
+    "prefectureId": 91
+  },
+  {
+    "type": "station",
+    "name": "久米島",
+    "blockId": 47929,
+    "prefectureId": 91
+  },
+  {
+    "type": "station",
+    "name": "西表島",
+    "blockId": 47917,
+    "prefectureId": 91
+  },
+  {
+    "type": "station",
+    "name": "与那国島",
+    "blockId": 47912,
+    "prefectureId": 91
+  },
+  {
+    "type": "station",
+    "name": "南大東（南大東島）",
+    "blockId": 47945,
+    "prefectureId": 91
+  },
+  {
+    "type": "station",
+    "name": "昭和",
+    "blockId": 89532,
+    "prefectureId": 99
+  }
+]

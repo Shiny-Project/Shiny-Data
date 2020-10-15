@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "mobx-react";
 import Menu from "./components/Menu";
-import store from "./store";
+import store from "./stores";
 
 class DataViewer extends React.Component {
     render() {

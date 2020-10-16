@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { inject, observer } from "mobx-react";
 import { Drawer } from "antd";
 import { RightSquareOutlined } from "@ant-design/icons";
@@ -10,18 +10,17 @@ import "./index.scss";
 export interface HomeMenuProps extends StoreInjectedProps<IDataViewerStore> {}
 
 const HomeMenu = (props: HomeMenuProps): JSX.Element => {
-    const [visible, updateVisible] = useState(false);
-    useEffect(() => {
-
-    }, []);
+    const store = props.store!;
+    const { showMenuDrawer, hideMenuDrawer } = store;
     return (
         <>
             <Drawer
                 placement="left"
-                visible={visible}
+                visible={store.isMenuDrawerVisible}
                 title="Shiny Data"
+                width="350"
                 onClose={() => {
-                    updateVisible(false);
+                    hideMenuDrawer();
                 }}
             >
                 <FilterForm />
@@ -29,7 +28,7 @@ const HomeMenu = (props: HomeMenuProps): JSX.Element => {
             <div
                 className="floating-icon"
                 onClick={() => {
-                    updateVisible(true);
+                    showMenuDrawer();
                 }}
             >
                 <RightSquareOutlined />

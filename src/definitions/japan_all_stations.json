@@ -427,12 +427,6 @@
   },
   {
     "type": "station",
-    "name": "富士山",
-    "blockId": 47639,
-    "prefectureId": 50
-  },
-  {
-    "type": "station",
     "name": "名古屋",
     "blockId": 47636,
     "prefectureId": 51

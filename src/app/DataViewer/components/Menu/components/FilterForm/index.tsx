@@ -12,7 +12,7 @@ export interface FilterFormProps extends StoreInjectedProps<IDataViewerStore> {}
 
 const FilterForm = (props: FilterFormProps): JSX.Element => {
     const store = props.store!;
-    const { form, hideMenuDrawer, applyFilter } = store;
+    const { form, applyFilter } = store;
     return (
         <>
             <Form>
@@ -54,7 +54,6 @@ const FilterForm = (props: FilterFormProps): JSX.Element => {
                 </Form.Item>
             </Form>
             <Button type="primary" onClick={() => {
-                hideMenuDrawer();
                 applyFilter();
             }}>应用</Button>
         </>

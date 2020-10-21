@@ -1,5 +1,6 @@
-import { types } from "mobx-state-tree";
+import { types, flow } from "mobx-state-tree";
 import { Instance } from "mobx-state-tree";
+import { message } from "antd";
 import DataViewerService from "../service";
 import { WeatherMeasurements } from "../types";
 import BinaryDataTypes from "../../../proto";
@@ -12,40 +13,56 @@ const DataViewerStore = types
         >({}),
         form: FormStore,
         loading: false,
-        isMenuDrawerVisible: false
+        isMenuDrawerVisible: false,
     })
     .actions((self) => ({
-        async getHistoricalWeatherData(
+        getHistoricalWeatherData: flow(function* (
             startTime: Date,
             endTime: Date,
             blockId: number,
             measurements: WeatherMeasurements[]
         ) {
-            self.weatherData = await DataViewerService.getHistoricalWeatherData(
+            const weatherData = yield DataViewerService.getHistoricalWeatherData(
                 startTime,
                 endTime,
                 blockId,
                 measurements
             );
-        },
+            console.log(weatherData);
+            self.weatherData = weatherData;
+        }),
     }))
     .actions((self) => ({
-        async applyFilter() {
+        applyFilter: flow(function* () {
+            if (!self.form.blockId) {
+                return message.error(`请选择观测区域`);
+            }
+            if (self.form.measurements.length === 0) {
+                return message.error(`请选择观测要素`);
+            }
+            if (self.form.timeRange.length === 0) {
+                return message.error(`请选择数据范围`);
+            }
+            self.isMenuDrawerVisible = false;
             self.loading = true;
-            await self.getHistoricalWeatherData(
-                self.form.timeRange[0],
-                self.form.timeRange[1],
-                self.form.blockId,
-                self.form.measurements as WeatherMeasurements[]
-            );
+            try {
+                yield self.getHistoricalWeatherData(
+                    self.form.timeRange[0],
+                    self.form.timeRange[1],
+                    self.form.blockId,
+                    self.form.measurements as WeatherMeasurements[]
+                );
+            } catch (e) {
+                message.error(e.message);
+            }
             self.loading = false;
-        },
+        }),
         showMenuDrawer() {
             self.isMenuDrawerVisible = true;
         },
         hideMenuDrawer() {
             self.isMenuDrawerVisible = false;
-        }
+        },
     }));
 
 export interface IDataViewerStore extends Instance<typeof DataViewerStore> {}

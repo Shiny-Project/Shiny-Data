@@ -8,8 +8,8 @@ const measurementsMap = {
     ],
     precipitation: [
         "precipitation",
-        "oneHourMaxPrecipitation",
-        "tenMinuteMaxPrecipitation",
+        // "oneHourMaxPrecipitation",
+        // "tenMinuteMaxPrecipitation",
     ],
 };
 

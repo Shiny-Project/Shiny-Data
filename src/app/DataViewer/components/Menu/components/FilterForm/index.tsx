@@ -33,12 +33,15 @@ const FilterForm = (props: FilterFormProps): JSX.Element => {
                 <Form.Item>
                     <Select
                         placeholder="请选择观测要素组合"
-                        onChange={(value: 'temperature' | 'precipitation') => {
+                        onChange={(
+                            value: "temperature" | "precipitation" | "snow"
+                        ) => {
                             form.updateMeasurementGroup(value);
                         }}
                     >
                         <Option value="temperature">气温</Option>
                         <Option value="precipitation">降水</Option>
+                        <Option value="snow">雪</Option>
                     </Select>
                 </Form.Item>
                 <Form.Item>
@@ -53,9 +56,14 @@ const FilterForm = (props: FilterFormProps): JSX.Element => {
                     ></DatePicker.RangePicker>
                 </Form.Item>
             </Form>
-            <Button type="primary" onClick={() => {
-                applyFilter();
-            }}>应用</Button>
+            <Button
+                type="primary"
+                onClick={() => {
+                    applyFilter();
+                }}
+            >
+                应用
+            </Button>
         </>
     );
 };

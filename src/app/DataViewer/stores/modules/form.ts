@@ -1,6 +1,6 @@
 import { types, cast } from "mobx-state-tree";
 
-const measurementsMap = {
+const measurementGroupMap = {
     temperature: [
         "averageTemperature",
         "highestTemperature",
@@ -11,7 +11,10 @@ const measurementsMap = {
         // "oneHourMaxPrecipitation",
         // "tenMinuteMaxPrecipitation",
     ],
+    snow: ["showFall", "showDepth"],
 };
+
+export type MeasurementGroup = "temperature" | "precipitation" | "snow";
 
 const FormStore = types
     .model({
@@ -24,9 +27,13 @@ const FormStore = types
         updateBlockId(blockId: number) {
             self.blockId = blockId;
         },
-        updateMeasurementGroup(group: 'temperature' | 'precipitation') {
+        updateMeasurementGroup(group: MeasurementGroup) {
             self.measurementGroup = group;
-            self.measurements.splice(0, self.measurements.length, ...measurementsMap[group]);
+            self.measurements.splice(
+                0,
+                self.measurements.length,
+                ...measurementGroupMap[group]
+            );
         },
         updateTimeRange(timeRange: [Date, Date]) {
             self.timeRange = cast([timeRange[0], timeRange[1]]);

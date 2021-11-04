@@ -22,13 +22,13 @@ const DataViewerStore = types
             blockId: number,
             measurements: WeatherMeasurements[]
         ) {
-            const weatherData = yield DataViewerService.getHistoricalWeatherData(
-                startTime,
-                endTime,
-                blockId,
-                measurements
-            );
-            console.log(weatherData);
+            const weatherData =
+                yield DataViewerService.getHistoricalWeatherData(
+                    startTime,
+                    endTime,
+                    blockId,
+                    measurements
+                );
             self.weatherData = weatherData;
         }),
     }))
@@ -53,7 +53,9 @@ const DataViewerStore = types
                     self.form.measurements as WeatherMeasurements[]
                 );
             } catch (e) {
-                message.error(e.message);
+                if (e instanceof Error) {
+                    message.error(e.message);
+                }
             }
             self.loading = false;
         }),

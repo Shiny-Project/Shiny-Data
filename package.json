@@ -1,49 +1,51 @@
 {
-  "name": "shiny-data",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@ant-design/icons": "^4.2.2",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "antd": "^4.4.3",
-    "axios": "^0.19.2",
-    "bizcharts": "^4.0.14",
-    "mobx": "^5.15.7",
-    "mobx-react": "^6.3.0",
-    "mobx-state-tree": "^3.17.2",
-    "node-sass": "^4.14.1",
-    "protobufjs": "~6.10.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
-  },
-  "scripts": {
-    "start": "set HTTPS=true&&set SSL_CRT_FILE=./.cert/server.local.crt&&set SSL_KEY_FILE=./.cert/server.local.key&&set WDS_SOCKET_PORT=3000&&react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "generate:proto": "pbjs -t json-module -w es6 ./src/proto/*.proto > ./src/proto/index.js && pbjs -t static-module ./src/proto/*.proto | pbts -o ./src/proto/index.d.ts -"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "shiny-data",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@ant-design/icons": "^4.7.0",
+        "antd": "^4.16.13",
+        "axios": "^0.24.0",
+        "bizcharts": "^4.0.14",
+        "mobx": "^5.15.7",
+        "mobx-react": "^6.3.0",
+        "mobx-state-tree": "^3.17.2",
+        "protobufjs": "~6.10.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "@types/jest": "^24.0.0",
+        "@types/node": "^12.0.0",
+        "@types/react": "^16.9.0",
+        "@types/react-dom": "^16.9.0",
+        "node-sass": "^6.0.1",
+        "react-scripts": "4.0.3",
+        "typescript": "^4.4.4"
+    },
+    "scripts": {
+        "start": "set HTTPS=true&&set SSL_CRT_FILE=./.cert/server.local.crt&&set SSL_KEY_FILE=./.cert/server.local.key&&set WDS_SOCKET_PORT=3000&&react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "generate:proto": "pbjs -t json-module -w es6 ./src/proto/*.proto > ./src/proto/index.js && pbjs -t static-module ./src/proto/*.proto | pbts -o ./src/proto/index.d.ts -"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }

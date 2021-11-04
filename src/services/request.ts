@@ -1,7 +1,15 @@
 import axios, { AxiosInstance, AxiosError, AxiosResponse } from "axios";
 
-const isAxiosResponse = (e: AxiosError | AxiosResponse): e is AxiosResponse => {
+const isAxiosResponse = (
+    e: AxiosError | AxiosResponse | Error
+): e is AxiosResponse => {
     return !!(e as AxiosResponse).status;
+};
+
+const isAxiosError = (
+    e: AxiosError | AxiosResponse | Error
+): e is AxiosError => {
+    return !(e instanceof Error) && !!e.request && !isAxiosResponse(e);
 };
 
 export interface Response {
@@ -57,7 +65,9 @@ class Fetch {
                     reject(this.parseError(response));
                 }
             } catch (e) {
-                reject(this.parseError(e));
+                if (e instanceof Error) {
+                    reject(this.parseError(e));
+                }
             }
         });
     }
@@ -77,11 +87,11 @@ class Fetch {
     post<T>(path: string = "/", payload: object = {}) {
         return this.request<T>("POST", path, payload);
     }
-    
-    private parseError(e: AxiosError | AxiosResponse): RequestError {
+
+    private parseError(e: AxiosError | AxiosResponse | Error): RequestError {
         if (isAxiosResponse(e)) {
             return new RequestError(e.data.name, e.data.message);
-        } else {
+        } else if (isAxiosError(e)) {
             if (e.request.response) {
                 try {
                     const error = JSON.parse(e.request.responseText);
@@ -97,6 +107,8 @@ class Fetch {
                 );
             }
             return new RequestError("unknown_error", "未知错误");
+        } else {
+            return new RequestError("network_error", `网络错误：${e.message}`);
         }
     }
 }

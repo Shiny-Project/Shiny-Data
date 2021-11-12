@@ -1,9 +1,9 @@
 import { WeatherMeasurements } from "./types";
 
 export const PrecipitationMeasurements: WeatherMeasurements[] = [
-    "precipitation",
-    "oneHourMaxPrecipitation",
-    "tenMinuteMaxPrecipitation",
-    "showDepth",
-    "showFall",
+    WeatherMeasurements.Precipitation,
+    WeatherMeasurements.OneHourMaxPrecipitation,
+    WeatherMeasurements.TenMinuteMaxPrecipitation,
+    WeatherMeasurements.SnowDepth,
+    WeatherMeasurements.SnowFall,
 ];

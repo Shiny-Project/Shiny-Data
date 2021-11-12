@@ -1,17 +1,18 @@
 import { types, cast } from "mobx-state-tree";
+import { WeatherMeasurements } from "../../types";
 
 const measurementGroupMap = {
     temperature: [
-        "averageTemperature",
-        "highestTemperature",
-        "lowestTemperature",
+        WeatherMeasurements.AverageTemperature,
+        WeatherMeasurements.HighestTemperature,
+        WeatherMeasurements.LowestTemperature,
     ],
     precipitation: [
-        "precipitation",
+        WeatherMeasurements.Precipitation,
         // "oneHourMaxPrecipitation",
         // "tenMinuteMaxPrecipitation",
     ],
-    snow: ["showFall", "showDepth"],
+    snow: [WeatherMeasurements.SnowFall, WeatherMeasurements.SnowDepth],
 };
 
 export type MeasurementGroup = "temperature" | "precipitation" | "snow";

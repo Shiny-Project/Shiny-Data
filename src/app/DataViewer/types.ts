@@ -1,24 +1,25 @@
-export type WeatherMeasurements =
-    | "averagePressure"
-    | "averageSeaLevelPressure"
-    | "precipitation"
-    | "oneHourMaxPrecipitation"
-    | "tenMinuteMaxPrecipitation"
-    | "averageTemperature"
-    | "highestTemperature"
-    | "lowestTemperature"
-    | "averageHumidity"
-    | "lowestHumidity"
-    | "averageWindSpeed"
-    | "maximumWindSpeed"
-    | "maximumWindDirection"
-    | "maximumGustSpeed"
-    | "maximumGustDirection"
-    | "daylightHours"
-    | "showFall"
-    | "showDepth"
-    | "dayWeatherDescription"
-    | "nightWeatherDescription";
+export enum WeatherMeasurements {
+    AveragePressure = "averagePressure",
+    AverageSeaLevelPressure = "averageSeaLevelPressure",
+    Precipitation = "precipitation",
+    OneHourMaxPrecipitation = "oneHourMaxPrecipitation",
+    TenMinuteMaxPrecipitation = "tenMinuteMaxPrecipitation",
+    AverageTemperature = "averageTemperature",
+    HighestTemperature = "highestTemperature",
+    LowestTemperature = "lowestTemperature",
+    AverageHumidity = "averageHumidity",
+    LowestHumidity = "lowestHumidity",
+    AverageWindSpeed = "averageWindSpeed",
+    MaximumWindSpeed = "maximumWindSpeed",
+    MaximumWindDirection = "maximumWindDirection",
+    MaximumGustSpeed = "maximumGustSpeed",
+    MaximumGustDirection = "maximumGustDirection",
+    DaylightHours = "daylightHours",
+    SnowFall = "showFall",
+    SnowDepth = "showDepth",
+    DayWeatherDescription = "dayWeatherDescription",
+    NightWeatherDescription = "nightWeatherDescription",
+}
 
 export enum WeatherMeasurementsMap {
     "averagePressure" = "平均气压",

@@ -1,13 +1,13 @@
 import React, { useMemo } from "react";
 import dayjs from "dayjs";
 import { inject, observer } from "mobx-react";
-import { Chart, Axis, Line } from "bizcharts";
+import { Chart, Axis, Line, Interval } from "bizcharts";
 import { StoreInjectedProps } from "src/types/common";
 import { IHistoryWeatherDataResponseItem } from "src/proto";
 import { IDataViewerStore } from "../../stores";
 import { WeatherMeasurements, WeatherMeasurementsMap } from "../../types";
-import "./index.scss";
 import { PrecipitationMeasurements } from "../../definitions";
+import "./index.scss";
 
 export interface GraphProps extends StoreInjectedProps<IDataViewerStore> {}
 
@@ -28,6 +28,7 @@ const formatWeatherData = (data: IHistoryWeatherDataResponseItem[]) => {
                     result.push({
                         time: dayjs(cursor).format("YYYY-MM-DD"),
                         type: key,
+                        [key]: 0,
                         // @ts-ignore
                         value: 0,
                     });
@@ -41,6 +42,8 @@ const formatWeatherData = (data: IHistoryWeatherDataResponseItem[]) => {
                     time: dayjs(item.time).format("YYYY-MM-DD"),
                     type: key,
                     // @ts-ignore
+                    [key]: item[key],
+                    // @ts-ignore
                     value: item[key],
                 });
             }
@@ -53,6 +56,19 @@ const formatWeatherData = (data: IHistoryWeatherDataResponseItem[]) => {
 const Graph = (props: GraphProps): JSX.Element | null => {
     const store = props.store!;
     const { weatherData } = store;
+    const measurements = useMemo(() => {
+        if (!weatherData.data?.length) {
+            return [];
+        }
+        const result = [];
+        const firstItem = weatherData.data[0];
+        for (const key of Object.keys(firstItem)) {
+            if (key !== "time") {
+                result.push(key);
+            }
+        }
+        return result;
+    }, [weatherData.data]);
     const data = useMemo(() => {
         console.log(weatherData.data);
         return !weatherData.data?.length
@@ -69,10 +85,46 @@ const Graph = (props: GraphProps): JSX.Element | null => {
     }
     return (
         <div className="graph-container">
-            <Chart data={data} scale={scale} autoFit>
+            <Chart data={data} scale={scale} autoFit key={measurements}>
                 <Axis name="time"></Axis>
                 <Axis name="value"></Axis>
-                <Line position="time*value" color="type" label="value"></Line>
+                {measurements.includes(WeatherMeasurements.SnowFall) &&
+                    measurements.includes(WeatherMeasurements.SnowDepth) && (
+                        <Interval
+                            adjust={[
+                                {
+                                    type: "dodge",
+                                    marginRatio: 0,
+                                },
+                            ]}
+                            color="type"
+                            position="time*value"
+                        />
+                    )}
+                {measurements.includes(WeatherMeasurements.Precipitation) && (
+                    <Interval
+                        adjust={[
+                            {
+                                type: "dodge",
+                                marginRatio: 0,
+                            },
+                        ]}
+                        color="type"
+                        position="time*value"
+                    />
+                )}
+                {measurements.includes(
+                    WeatherMeasurements.HighestTemperature
+                ) &&
+                    measurements.includes(
+                        WeatherMeasurements.LowestTemperature
+                    ) && (
+                        <Line
+                            position="time*value"
+                            color="type"
+                            label="value"
+                        ></Line>
+                    )}
             </Chart>
         </div>
     );

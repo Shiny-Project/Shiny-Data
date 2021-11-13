@@ -1,3 +1,3 @@
 export type StoreInjectedProps<StoreType> = {
-    store?: StoreType
+    store?: StoreType;
 };

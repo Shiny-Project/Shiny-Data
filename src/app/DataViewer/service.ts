@@ -14,18 +14,13 @@ class DataViewerService extends BaseService {
         blockId: number,
         measurements: WeatherMeasurements[]
     ) {
-        const response = await this.request.post<HistoricalWeatherDataResponse>(
-            "/Weather/JMA/query",
-            {
-                startTime: startTime.toISOString(),
-                endTime: endTime.toISOString(),
-                blockId,
-                factors: measurements,
-            }
-        );
-        const weatherData = BinaryDataTypes.HistoryWeatherDataResponse.decode(
-            base64ToUint8Array(response.result)
-        );
+        const response = await this.request.post<HistoricalWeatherDataResponse>("/Weather/JMA/query", {
+            startTime: startTime.toISOString(),
+            endTime: endTime.toISOString(),
+            blockId,
+            factors: measurements,
+        });
+        const weatherData = BinaryDataTypes.HistoryWeatherDataResponse.decode(base64ToUint8Array(response.result));
         return weatherData;
     }
 }

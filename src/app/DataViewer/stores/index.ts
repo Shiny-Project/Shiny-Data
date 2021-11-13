@@ -8,9 +8,7 @@ import FormStore from "./modules/form";
 
 const DataViewerStore = types
     .model({
-        weatherData: types.frozen<
-            Partial<BinaryDataTypes.HistoryWeatherDataResponse>
-        >({}),
+        weatherData: types.frozen<Partial<BinaryDataTypes.HistoryWeatherDataResponse>>({}),
         form: FormStore,
         loading: false,
         isMenuDrawerVisible: false,
@@ -22,13 +20,12 @@ const DataViewerStore = types
             blockId: number,
             measurements: WeatherMeasurements[]
         ) {
-            const weatherData =
-                yield DataViewerService.getHistoricalWeatherData(
-                    startTime,
-                    endTime,
-                    blockId,
-                    measurements
-                );
+            const weatherData = yield DataViewerService.getHistoricalWeatherData(
+                startTime,
+                endTime,
+                blockId,
+                measurements
+            );
             self.weatherData = weatherData;
         }),
     }))

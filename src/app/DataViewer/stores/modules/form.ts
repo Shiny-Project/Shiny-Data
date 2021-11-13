@@ -30,11 +30,7 @@ const FormStore = types
         },
         updateMeasurementGroup(group: MeasurementGroup) {
             self.measurementGroup = group;
-            self.measurements.splice(
-                0,
-                self.measurements.length,
-                ...measurementGroupMap[group]
-            );
+            self.measurements.splice(0, self.measurements.length, ...measurementGroupMap[group]);
         },
         updateTimeRange(timeRange: [Date, Date]) {
             self.timeRange = cast([timeRange[0], timeRange[1]]);

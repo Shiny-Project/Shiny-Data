@@ -1,20 +1,18 @@
 import * as $protobuf from "protobufjs";
 /** Properties of a HistoryWeatherDataResponse. */
 export interface IHistoryWeatherDataResponse {
-
     /** HistoryWeatherDataResponse blockId */
-    blockId?: (number|null);
+    blockId?: number | null;
 
     /** HistoryWeatherDataResponse location */
-    location?: (string|null);
+    location?: string | null;
 
     /** HistoryWeatherDataResponse data */
-    data?: (IHistoryWeatherDataResponseItem[]|null);
+    data?: IHistoryWeatherDataResponseItem[] | null;
 }
 
 /** Represents a HistoryWeatherDataResponse. */
 export class HistoryWeatherDataResponse implements IHistoryWeatherDataResponse {
-
     /**
      * Constructs a new HistoryWeatherDataResponse.
      * @param [properties] Properties to set
@@ -61,7 +59,7 @@ export class HistoryWeatherDataResponse implements IHistoryWeatherDataResponse {
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
-    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): HistoryWeatherDataResponse;
+    public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): HistoryWeatherDataResponse;
 
     /**
      * Decodes a HistoryWeatherDataResponse message from the specified reader or buffer, length delimited.
@@ -70,14 +68,14 @@ export class HistoryWeatherDataResponse implements IHistoryWeatherDataResponse {
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
-    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): HistoryWeatherDataResponse;
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): HistoryWeatherDataResponse;
 
     /**
      * Verifies a HistoryWeatherDataResponse message.
      * @param message Plain object to verify
      * @returns `null` if valid, otherwise the reason why it is not
      */
-    public static verify(message: { [k: string]: any }): (string|null);
+    public static verify(message: { [k: string]: any }): string | null;
 
     /**
      * Creates a HistoryWeatherDataResponse message from a plain object. Also converts values to their respective internal types.
@@ -92,7 +90,10 @@ export class HistoryWeatherDataResponse implements IHistoryWeatherDataResponse {
      * @param [options] Conversion options
      * @returns Plain object
      */
-    public static toObject(message: HistoryWeatherDataResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+    public static toObject(
+        message: HistoryWeatherDataResponse,
+        options?: $protobuf.IConversionOptions
+    ): { [k: string]: any };
 
     /**
      * Converts this HistoryWeatherDataResponse to JSON.
@@ -103,77 +104,75 @@ export class HistoryWeatherDataResponse implements IHistoryWeatherDataResponse {
 
 /** Properties of a HistoryWeatherDataResponseItem. */
 export interface IHistoryWeatherDataResponseItem {
-
     /** HistoryWeatherDataResponseItem time */
-    time?: (string|null);
+    time?: string | null;
 
     /** HistoryWeatherDataResponseItem averagePressure */
-    averagePressure?: (number|null);
+    averagePressure?: number | null;
 
     /** HistoryWeatherDataResponseItem averageSeaLevelPressure */
-    averageSeaLevelPressure?: (number|null);
+    averageSeaLevelPressure?: number | null;
 
     /** HistoryWeatherDataResponseItem precipitation */
-    precipitation?: (number|null);
+    precipitation?: number | null;
 
     /** HistoryWeatherDataResponseItem oneHourMaxPrecipitation */
-    oneHourMaxPrecipitation?: (number|null);
+    oneHourMaxPrecipitation?: number | null;
 
     /** HistoryWeatherDataResponseItem tenMinuteMaxPrecipitation */
-    tenMinuteMaxPrecipitation?: (number|null);
+    tenMinuteMaxPrecipitation?: number | null;
 
     /** HistoryWeatherDataResponseItem averageTemperature */
-    averageTemperature?: (number|null);
+    averageTemperature?: number | null;
 
     /** HistoryWeatherDataResponseItem highestTemperature */
-    highestTemperature?: (number|null);
+    highestTemperature?: number | null;
 
     /** HistoryWeatherDataResponseItem lowestTemperature */
-    lowestTemperature?: (number|null);
+    lowestTemperature?: number | null;
 
     /** HistoryWeatherDataResponseItem averageHumidity */
-    averageHumidity?: (number|null);
+    averageHumidity?: number | null;
 
     /** HistoryWeatherDataResponseItem lowestHumidity */
-    lowestHumidity?: (number|null);
+    lowestHumidity?: number | null;
 
     /** HistoryWeatherDataResponseItem averageWindSpeed */
-    averageWindSpeed?: (number|null);
+    averageWindSpeed?: number | null;
 
     /** HistoryWeatherDataResponseItem maximumWindSpeed */
-    maximumWindSpeed?: (number|null);
+    maximumWindSpeed?: number | null;
 
     /** HistoryWeatherDataResponseItem maximumWindDirection */
-    maximumWindDirection?: (string|null);
+    maximumWindDirection?: string | null;
 
     /** HistoryWeatherDataResponseItem maximumGustSpeed */
-    maximumGustSpeed?: (number|null);
+    maximumGustSpeed?: number | null;
 
     /** HistoryWeatherDataResponseItem maximumGustDirection */
-    maximumGustDirection?: (string|null);
+    maximumGustDirection?: string | null;
 
     /** HistoryWeatherDataResponseItem daylightHours */
-    daylightHours?: (number|null);
+    daylightHours?: number | null;
 
     /** HistoryWeatherDataResponseItem showFall */
-    showFall?: (number|null);
+    showFall?: number | null;
 
     /** HistoryWeatherDataResponseItem showDepth */
-    showDepth?: (number|null);
+    showDepth?: number | null;
 
     /** HistoryWeatherDataResponseItem dayWeatherDescription */
-    dayWeatherDescription?: (string|null);
+    dayWeatherDescription?: string | null;
 
     /** HistoryWeatherDataResponseItem nightWeatherDescription */
-    nightWeatherDescription?: (string|null);
+    nightWeatherDescription?: string | null;
 
     /** HistoryWeatherDataResponseItem date */
-    date?: (number|null);
+    date?: number | null;
 }
 
 /** Represents a HistoryWeatherDataResponseItem. */
 export class HistoryWeatherDataResponseItem implements IHistoryWeatherDataResponseItem {
-
     /**
      * Constructs a new HistoryWeatherDataResponseItem.
      * @param [properties] Properties to set
@@ -267,7 +266,10 @@ export class HistoryWeatherDataResponseItem implements IHistoryWeatherDataRespon
      * @param [writer] Writer to encode to
      * @returns Writer
      */
-    public static encodeDelimited(message: IHistoryWeatherDataResponseItem, writer?: $protobuf.Writer): $protobuf.Writer;
+    public static encodeDelimited(
+        message: IHistoryWeatherDataResponseItem,
+        writer?: $protobuf.Writer
+    ): $protobuf.Writer;
 
     /**
      * Decodes a HistoryWeatherDataResponseItem message from the specified reader or buffer.
@@ -277,7 +279,7 @@ export class HistoryWeatherDataResponseItem implements IHistoryWeatherDataRespon
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
-    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): HistoryWeatherDataResponseItem;
+    public static decode(reader: $protobuf.Reader | Uint8Array, length?: number): HistoryWeatherDataResponseItem;
 
     /**
      * Decodes a HistoryWeatherDataResponseItem message from the specified reader or buffer, length delimited.
@@ -286,14 +288,14 @@ export class HistoryWeatherDataResponseItem implements IHistoryWeatherDataRespon
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
-    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): HistoryWeatherDataResponseItem;
+    public static decodeDelimited(reader: $protobuf.Reader | Uint8Array): HistoryWeatherDataResponseItem;
 
     /**
      * Verifies a HistoryWeatherDataResponseItem message.
      * @param message Plain object to verify
      * @returns `null` if valid, otherwise the reason why it is not
      */
-    public static verify(message: { [k: string]: any }): (string|null);
+    public static verify(message: { [k: string]: any }): string | null;
 
     /**
      * Creates a HistoryWeatherDataResponseItem message from a plain object. Also converts values to their respective internal types.
@@ -308,7 +310,10 @@ export class HistoryWeatherDataResponseItem implements IHistoryWeatherDataRespon
      * @param [options] Conversion options
      * @returns Plain object
      */
-    public static toObject(message: HistoryWeatherDataResponseItem, options?: $protobuf.IConversionOptions): { [k: string]: any };
+    public static toObject(
+        message: HistoryWeatherDataResponseItem,
+        options?: $protobuf.IConversionOptions
+    ): { [k: string]: any };
 
     /**
      * Converts this HistoryWeatherDataResponseItem to JSON.

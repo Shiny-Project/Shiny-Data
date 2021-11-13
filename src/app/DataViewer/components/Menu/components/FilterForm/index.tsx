@@ -17,10 +17,7 @@ const FilterForm = (props: FilterFormProps): JSX.Element => {
         <>
             <Form>
                 <Form.Item>
-                    <Select
-                        placeholder="请选择观测台站"
-                        onChange={(value: number) => form.updateBlockId(value)}
-                    >
+                    <Select placeholder="请选择观测台站" onChange={(value: number) => form.updateBlockId(value)}>
                         {RegionDefinition.map((item) => {
                             return (
                                 <Option key={item.blockId} value={item.blockId}>
@@ -33,9 +30,7 @@ const FilterForm = (props: FilterFormProps): JSX.Element => {
                 <Form.Item>
                     <Select
                         placeholder="请选择观测要素组合"
-                        onChange={(
-                            value: "temperature" | "precipitation" | "snow"
-                        ) => {
+                        onChange={(value: "temperature" | "precipitation" | "snow") => {
                             form.updateMeasurementGroup(value);
                         }}
                     >
@@ -48,10 +43,7 @@ const FilterForm = (props: FilterFormProps): JSX.Element => {
                     <DatePicker.RangePicker
                         className="date-picker"
                         onChange={(values, valueStrings) => {
-                            form.updateTimeRange([
-                                new Date(valueStrings[0]),
-                                new Date(valueStrings[1]),
-                            ]);
+                            form.updateTimeRange([new Date(valueStrings[0]), new Date(valueStrings[1])]);
                         }}
                     ></DatePicker.RangePicker>
                 </Form.Item>

@@ -19,12 +19,7 @@ const formatWeatherData = (data: IHistoryWeatherDataResponseItem[]) => {
         while (cursor.isBefore(currentDate, "day")) {
             // 填充无数据日期
             for (const key of Object.keys(item)) {
-                if (
-                    key !== "time" &&
-                    PrecipitationMeasurements.includes(
-                        key as WeatherMeasurements
-                    )
-                ) {
+                if (key !== "time" && PrecipitationMeasurements.includes(key as WeatherMeasurements)) {
                     result.push({
                         time: dayjs(cursor).format("YYYY-MM-DD"),
                         type: key,
@@ -71,9 +66,7 @@ const Graph = (props: GraphProps): JSX.Element | null => {
     }, [weatherData.data]);
     const data = useMemo(() => {
         console.log(weatherData.data);
-        return !weatherData.data?.length
-            ? null
-            : formatWeatherData(weatherData.data);
+        return !weatherData.data?.length ? null : formatWeatherData(weatherData.data);
     }, [weatherData.data]);
     const scale = {
         type: {
@@ -113,17 +106,9 @@ const Graph = (props: GraphProps): JSX.Element | null => {
                         position="time*value"
                     />
                 )}
-                {measurements.includes(
-                    WeatherMeasurements.HighestTemperature
-                ) &&
-                    measurements.includes(
-                        WeatherMeasurements.LowestTemperature
-                    ) && (
-                        <Line
-                            position="time*value"
-                            color="type"
-                            label="value"
-                        ></Line>
+                {measurements.includes(WeatherMeasurements.HighestTemperature) &&
+                    measurements.includes(WeatherMeasurements.LowestTemperature) && (
+                        <Line position="time*value" color="type" label="value"></Line>
                     )}
             </Chart>
         </div>

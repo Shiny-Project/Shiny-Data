@@ -1,14 +1,10 @@
 import axios, { AxiosInstance, AxiosError, AxiosResponse } from "axios";
 
-const isAxiosResponse = (
-    e: AxiosError | AxiosResponse | Error
-): e is AxiosResponse => {
+const isAxiosResponse = (e: AxiosError | AxiosResponse | Error): e is AxiosResponse => {
     return !!(e as AxiosResponse).status;
 };
 
-const isAxiosError = (
-    e: AxiosError | AxiosResponse | Error
-): e is AxiosError => {
+const isAxiosError = (e: AxiosError | AxiosResponse | Error): e is AxiosError => {
     return !(e instanceof Error) && !!e.request && !isAxiosResponse(e);
 };
 
@@ -101,10 +97,7 @@ class Fetch {
                 }
             }
             if (e.request.status) {
-                return new RequestError(
-                    "netword_error",
-                    `网络错误: ${e.request.status} ${e.request.statusText}`
-                );
+                return new RequestError("netword_error", `网络错误: ${e.request.status} ${e.request.statusText}`);
             }
             return new RequestError("unknown_error", "未知错误");
         } else {
